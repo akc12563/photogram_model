@@ -2,6 +2,23 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "photos#index"
+  # Routes for the Comment resource:
+  # CREATE
+  get "/comments/new", :controller => "comments", :action => "new"
+  post "/create_comment", :controller => "comments", :action => "create"
+
+  # READ
+  get "/comments", :controller => "comments", :action => "index"
+  get "/comments/:id", :controller => "comments", :action => "show"
+
+  # UPDATE
+  get "/comments/:id/edit", :controller => "comments", :action => "edit"
+  post "/update_comment/:id", :controller => "comments", :action => "update"
+
+  # DELETE
+  get "/delete_comment/:id", :controller => "comments", :action => "destroy"
+  #------------------------------
+
   # Routes for the Friend_request resource:
   # CREATE
   get "/friend_requests/new", :controller => "friend_requests", :action => "new"
