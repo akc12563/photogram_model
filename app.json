@@ -1,0 +1,1 @@
+{"name":"Photogram Model","repository":"https://github.com/akc12563/photogram_model","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
